@@ -29,7 +29,7 @@ let sayName name =
 [<EntryPoint>]
 let main argv = 
     let errorHandler = ProcessExiter(colorizer = function ErrorCode.HelpText -> None | _ -> Some ConsoleColor.Red)
-    let parser = ArgumentParser.Create<Name>(programName = "FSharpCliApp", errorHandler = errorHandler)
+    let parser = ArgumentParser.Create<Name>(programName = "sayHello", errorHandler = errorHandler)
 
 //    let results = parser.ParseCommandLine argv
 //    printfn "Got parse results %A" <| results.GetAllResults()
